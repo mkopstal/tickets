@@ -19,7 +19,7 @@ public class ApiController {
     }
     @PostMapping("/processJson")
     public Result processJson(@RequestBody List<Input> inputList) {
-        double basePrice = priceService.getBasePriceFromUrl();
+        double basePrice = priceService.getBasePriceFromUrl("Lithuania","Vilnius");
         double taxPercentage = priceService.getTaxPercentageFromUrl();
         List<Ticket> ticketDetails  = new ArrayList<Ticket>();
         double total = 0;

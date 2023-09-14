@@ -29,8 +29,8 @@ public class ApiControllerTest {
     @Test
     public void testProcessJson() {
         // Mock the behavior of PriceService
-        when(priceService.getBasePriceFromUrl()).thenReturn(10.0); // Replace with your desired value
-        when(priceService.getTaxPercentageFromUrl()).thenReturn(21.0); // Replace with your desired value
+        when(priceService.getBasePriceFromUrl("Lithuania","Vilnius")).thenReturn(10.0);
+        when(priceService.getTaxPercentageFromUrl()).thenReturn(21.0);
         // Prepare test data
         List<Input> inputList = new ArrayList<>();
         Input input1 = new Input(true, 2);
